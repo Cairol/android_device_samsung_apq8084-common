@@ -49,9 +49,13 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
-# Radio
+# Radio & RMNET
 PRODUCT_PACKAGES += \
-    libsecnativefeature
+    libsecnativefeature \
+    libcnefeatureconfig \
+    libprotobuf-cpp-full \
+    librmnetctl \
+    rmnetcli
 
 # Thermal engine
 PRODUCT_COPY_FILES += \
