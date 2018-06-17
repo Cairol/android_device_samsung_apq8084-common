@@ -109,6 +109,18 @@
              channels="2" />
     </EncoderProfile>
 
+    <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="42000000"
+             width="3840"
+             height="2160"
+             frameRate="30" />
+      <Audio codec="aac"
+             bitRate="256000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="384000"
@@ -192,6 +204,19 @@
              bitRate="17000000"
              width="1920"
              height="1080"
+             frameRate="30" />
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="256000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="42000000"
+             width="3840"
+             height="2160"
              frameRate="30" />
       <!-- audio setting is ignored -->
       <Audio codec="aac"
@@ -401,22 +426,28 @@
          or query the capabilities of the codec at all if it is disabled
     -->
     <VideoEncoderCap name="h264" enabled="true"
-        minBitRate="64000" maxBitRate="17000000"
-        minFrameWidth="176" maxFrameWidth="1920"
-        minFrameHeight="144" maxFrameHeight="1080"
-        minFrameRate="1" maxFrameRate="30" />
+        minBitRate="64000" maxBitRate="50000000"
+        minFrameWidth="176" maxFrameWidth="3840"
+        minFrameHeight="144" maxFrameHeight="2160"
+        minFrameRate="1" maxFrameRate="30"
+        maxHFRFrameWidth="1920" maxHFRFrameHeight="1080"
+        maxHFRMode="120" />
 
     <VideoEncoderCap name="h263" enabled="true"
         minBitRate="64000" maxBitRate="1000000"
         minFrameWidth="176" maxFrameWidth="800"
         minFrameHeight="144" maxFrameHeight="480"
-        minFrameRate="1" maxFrameRate="30" />
+        minFrameRate="1" maxFrameRate="30"
+        maxHFRFrameWidth="0" maxHFRFrameHeight="0"
+        maxHFRMode="0" />
 
     <VideoEncoderCap name="m4v" enabled="true"
         minBitRate="64000" maxBitRate="20000000"
         minFrameWidth="176" maxFrameWidth="1920"
         minFrameHeight="144" maxFrameHeight="1080"
-        minFrameRate="1" maxFrameRate="30" />
+        minFrameRate="1" maxFrameRate="30"
+        maxHFRFrameWidth="0" maxHFRFrameHeight="0"
+        maxHFRMode="0" />
 
     <AudioEncoderCap name="aac" enabled="true"
       minBitRate="8192" maxBitRate="256000"
