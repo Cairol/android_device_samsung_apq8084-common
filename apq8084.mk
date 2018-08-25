@@ -63,10 +63,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/vendor/etc/permissions/android.hardware.fingerprint.xml
 
-# WiFi
-PRODUCT_PACKAGES += \
-    wificond
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor
